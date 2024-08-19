@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
           <h1 className="text-xl md:text-2xl font-samibold mb-4">
             Website Privacy Statement
           </h1>
-          <p className="text-sm  mb-4">
+          <p className="text-sm mb-4">
             Our use and disclosure of an individual’s personal information is
             limited as required by state and federal law. We do not sell or rent
             personal information about visitors to the Websites.
