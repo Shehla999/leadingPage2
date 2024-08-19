@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <>
-      <header className="bg-black text-white px-6">
-        <div className="container mx-auto flex justify-between items-center  py-3 px-4">
-          <div className="flex space-x-6 text-sm">
-            <div className="flex items-center">
+      <header className="bg-black text-white px-6 w-full">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center  py-3 px-4 space-y-4 md:space-y-0 ">
+          <div className="flex flex-col md:flex-row justify-between items-center py-3 px-4 space-y-4 md:space-x-6 md:space-y-0 md:text-left text-sm ">
+            <div className="flex items-center justify-center md:justify-start">
               <FaPhoneAlt className="mr-3 text-red-500" />
               <span>Call Us: 773 876 2354</span>
             </div>
@@ -16,7 +16,7 @@ const Header = () => {
               <span>Email: support@gmail.com</span>
             </div>
           </div>
-          <button className="bg-red-600 text-white rounded-full px-6 md:px-2 py-2">
+          <button className="bg-red-600 text-white rounded-full px-6 md:px-4 py-2">
             Contact Us
           </button>
         </div>

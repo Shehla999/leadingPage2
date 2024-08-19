@@ -8,11 +8,21 @@ const experts = [
     name: "Martin Cousis",
     role: "Developer",
     image: Team1,
+    social: {
+      facebook: "https://www.facebook.com",
+      instagram: "https://www.instagram.com",
+      linkedin: "https://www.linkedin.com",
+    },
   },
   {
     name: "John Doe",
     role: "Designer",
     image: Team3,
+    social: {
+      facebook: "https://www.facebook.com",
+      instagram: "https://www.instagram.com",
+      linkedin: "https://www.linkedin.com",
+    },
   },
 ];
 const Experts = () => {
@@ -26,32 +36,39 @@ const Experts = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-8">
         {experts.map((expert, index) => (
-          <div
-            key={index}
-            className="bg-white shadow-lg rounded-lg overflow-hidden"
-          >
+          <div key={index} className="bg-white shadow-lg  ">
             <img
               src={expert.image}
               alt={expert.name}
               className="w-full object-cover"
             />
 
-            <div className="flex justify-center space-x-4 ">
-              <a href="#" className="text-gray-800 hover:text-gray-900 text-lg">
-                <FaFacebook />
+            <div className=" bg-white flex space-x-4 items-center justify-center ">
+              <a
+                href={expert.social.facebook}
+                className="left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full  text-gray-800 hover:text-white hover:bg-red-500  text-lg flex space-x-4 items-center justify-center bg-white p-4"
+              >
+                <FaFacebook className="text-2xl" />
               </a>
-              <a href="#" className="text-gray-800 hover:text-gray-900 text-lg">
-                <FaInstagram />
+
+              <a
+                href={expert.social.instagram}
+                className=" left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full  text-gray-800 hover:text-white hover:bg-red-500  text-lg flex space-x-4 items-center justify-center bg-white p-4"
+              >
+                <FaInstagram className="text-2xl" />
               </a>
-              <a href="#" className="text-gray-800 hover:text-gray-900 text-lg">
-                <FaLinkedin />
+              <a
+                href={expert.social.linkedin}
+                className="left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full  text-gray-800 hover:text-white hover:bg-red-500 text-lg flex space-x-4 items-center justify-center bg-white p-4"
+              >
+                <FaLinkedin className="text-2xl" />
               </a>
             </div>
-            <div className="p-6 text-center">
-              <h3> {expert.name} </h3>
-              <p> {expert.role} </p>
+            <div className="p-5 text-center ">
+              <h3 className="text-2xl font-semibold"> {expert.name} </h3>
+              <p className="text-xl"> {expert.role} </p>
             </div>
           </div>
         ))}

@@ -4,33 +4,37 @@ import Slider from "./Slider";
 import { FaAmbulance, FaHeart, FaPhoneAlt } from "react-icons/fa";
 import Counter from "./Counter";
 import Experts from "./Experts";
+import Testimonials from "./Testimonials";
+import Footer from "./Footer";
+import Booking from "./Booking";
 const Home = () => {
   return (
     <div>
       <Header />
-      <Slider className="z-50" />
+      <Slider />
 
-      <div className="border-2 w-[90vw] mx-auto flex justify-center  ">
-        <div className="flex flex-row w-full max-w-8xl ">
-          <div className="flex-1 bg-white text-black  flex items-center justify-center py-6 px-6">
-            <FaPhoneAlt className="mr-3" />
-            <span> Nutritional Counseling</span>
+      <div className="w-[90vw]  mx-auto   z-10 ">
+        <div className="flex  md:flex-row w-[90vw] mx-auto -mt-7 items-center absolute  ">
+          <div className="flex-1 bg-white text-black  flex items-center justify-center py-4 md:py-6 px-4 md:px-6 text-center">
+            {/* <FaPhoneAlt className="mr-2 md:mr-3" /> */}
+            <FaPhoneAlt className="mr-2 md:mr-3" /> Nutritional Counseling
           </div>
 
-          <div className="flex-1 bg-red-500 text-white  flex items-center justify-center py-6 px-6">
-            <FaHeart className="mr-3 text-white" />
-            <span> Mental Health Care</span>
+          <div className="flex-1 bg-red-500 text-white  flex items-center justify-center py-4 md:py-6 px-4 md:px-6 text-center text-sm md:text-lg ">
+            <FaHeart className="mr-2 md:mr-3 text-white" /> Mental Health Care
           </div>
-
-          <div className="flex-1 bg-white text-black  flex items-center justify-center py-6 px-6">
-            <FaAmbulance className="mr-3 " />
-            <span>Immediate Emergency Services</span>
+          <div className="flex-1 bg-white text-black  flex items-center justify-center py-4 md:py-6 px-4 md:px-6 text-center">
+            <FaAmbulance className="mr-2 md:mr-3 " />
+            Immediate Emergency Services
           </div>
         </div>
       </div>
 
-      <Counter className="z-0" />
+      <Counter className="z-0 " />
       <Experts />
+      <Testimonials />
+      <Booking />
+      <Footer />
     </div>
   );
 };
